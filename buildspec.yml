@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+  build:
+    commands:
+      - echo "Building the Apache web server deployment package"
+      - mkdir apache-deployment
+      - cp -r * apache-deployment/
+artifacts:
+  files:
+    - apache-deployment/*
