@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: /apache-web-repo/index.html
+    destination: /var/www/html/index.html
+hooks:
+  AfterInstall:
+    - location: deploy.sh
+      runas: root
